@@ -1,0 +1,1 @@
+SELECT product_name, product_category, total_amount FROM  flourmills_sales t1 WHERE total_amount > (SELECT AVG(total_amount) FROM flourmills_sales t2 WHERE t2.product_category = t1.product_category);

@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT EXTRACT(MONTH FROM sale_date) AS mesiac, SUM(total_amount) AS monthly_sales FROM flourmills_sales GROUP BY mesiac) AS monthly_table ORDER BY monthly_sales DESC;

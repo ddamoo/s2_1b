@@ -1,0 +1,1 @@
+SELECT product_name,total_amount, total_amount / sucet AS amount_share FROM flourmills_sales, (SELECT SUM(total_amount) AS sucet FROM flourmills_sales) AS s;

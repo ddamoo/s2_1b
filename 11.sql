@@ -1,0 +1,1 @@
+SELECT product_category, product_name, total_amount FROM flourmills_sales t1 WHERE EXISTS(SELECT 1 FROM flourmills_sales t2 WHERE t2.product_name = t1.product_name GROUP BY total_amount HAVING total_amount > 200000);
